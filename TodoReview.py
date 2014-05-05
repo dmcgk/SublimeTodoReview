@@ -149,8 +149,8 @@ class RenderResultRunCommand(sublime_plugin.TextCommand):
 			result_view.settings().set('todo_results', True)
 
 		hr = u'+ {0} +'.format('-' * 56)
-		header = u'{hr}\n| TodoReview @ {0:<43} |\n| {1:<56} |\n{hr}\n'.format(datetime.now().strftime('%A %m/%d/%y at %I:%M%p'), u'{0} files scanned'.format(file_counter), hr=hr)
-
+		header = ''
+		
 		result_view.erase(edit, sublime.Region(0, result_view.size()))
 		result_view.insert(edit, result_view.size(), header)
 
